@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { View, StyleSheet, Dimensions, Text } from 'react-native';
 
-interface Props {
+type Props = {
     playerName: string;
-    currentScore: string;
+    currentScore: number;
     isPlayersTurn: boolean;
 }
 

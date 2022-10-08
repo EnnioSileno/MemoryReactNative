@@ -2,8 +2,7 @@ import React, { FC } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/navigationArguments';
-import { CustomButton, CustomTextInput } from '../components';
-
+import { CustomButton, CustomTextInput } from '../components/basic';
 
 type MainScreenProps = NativeStackScreenProps<RootStackParamList, 'Main'>;
 
@@ -23,9 +22,12 @@ const MainScreen:FC<MainScreenProps> = ({ navigation }): JSX.Element => {
             </View>
             <CustomButton 
                 title='Start game'
-                onPress={() => navigation.navigate('InGame',  {
-                                                    nameOfPlayer1: player1, 
-                                                    nameOfPlayer2: player2, })}
+                onPress={() => navigation.navigate(
+                    'InGame',  
+                    {
+                        nameOfPlayer1: player1, 
+                        nameOfPlayer2: player2, 
+                    })}
             />
         </View>
     )

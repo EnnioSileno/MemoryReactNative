@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
-import {Dimensions, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-const {height, width} = Dimensions.get('screen');
-
-interface Props {
+type Props = {
     title: string;
     onPress: () => void;
 }

@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
 import { View, StyleSheet, Dimensions, Text, TouchableHighlight } from 'react-native';
-import { Int32 } from 'react-native/Libraries/Types/CodegenTypes';
-import emojis from '../resources/emojis';
-import { CardData } from '../screens/inGame';
+import { CardData } from '../interfaces';
 
-interface Props {
+type Props = {
     cardData: CardData;
     onCardItemPressed: () => void;
 }
