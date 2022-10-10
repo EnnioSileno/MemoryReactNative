@@ -1,14 +1,11 @@
 import CardData from "./iCardData";
+import PlayerData from "./iPlayerData";
 
 interface GameState {
     cards: CardData[],
-    isTurnPlayer1: boolean,
+    playerData: PlayerData,
     revealedCardNumber: number,
     moveCounter: number,
-    playerScores: {
-        scorePlayer1: number,
-        scorePlayer2: number,
-    }
 }
 
 export default GameState;

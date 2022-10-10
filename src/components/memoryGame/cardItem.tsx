@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { View, StyleSheet, Dimensions, Text, TouchableHighlight } from 'react-native';
+import emojis from '../../resources/emojis';
 import { CardData } from '../interfaces';
 
 type Props = {
@@ -7,11 +8,11 @@ type Props = {
     onCardItemPressed: () => void;
 }
 
-const CardItem:FC<Props> = ({ cardData, onCardItemPressed}): JSX.Element => {//{emojis.letters[cardData.cardNumber]}
+const CardItem:FC<Props> = ({ cardData, onCardItemPressed}): JSX.Element => {
     return (
         <TouchableHighlight style={cardData.isTurnable? styles.visible : styles.invisible} onPress={onCardItemPressed} >
             <View style={styles.cardItem}>
-                <Text style={cardData.isRevealed? styles.visible : styles.invisible} >{cardData.cardValue}</Text>
+                <Text style={cardData.isRevealed? styles.visible : styles.invisible} >{emojis.fruits[cardData.cardValue][1]}</Text>
             </View>
         </TouchableHighlight>
     )

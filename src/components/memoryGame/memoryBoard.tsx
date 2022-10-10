@@ -11,7 +11,7 @@ type Props = {
 const MemoryBoard:FC<Props> = ({gameState, onCardItemPressed}): JSX.Element => {
     let cardItems: JSX.Element[] = [];
     for(let i = 0; i < 30; i++) {
-        cardItems.push(<CardItem cardData={gameState.cards[i]} onCardItemPressed={() => onCardItemPressed(i)} ></CardItem>);
+        cardItems.push(<CardItem key={i} cardData={gameState.cards[i]} onCardItemPressed={() => onCardItemPressed(i)} ></CardItem>);
     }
     return (
         <View style={styles.boardContainer}>
