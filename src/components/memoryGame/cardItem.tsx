@@ -10,7 +10,7 @@ type Props = {
 
 const CardItem:FC<Props> = ({ cardData, onCardItemPressed}): JSX.Element => {
     return (
-        <TouchableHighlight style={cardData.isTurnable? styles.visible : styles.invisible} onPress={onCardItemPressed} >
+        <TouchableHighlight style={cardData.isTurnable? styles.visible : styles.invisible} onPress={onCardItemPressed} disabled={!cardData.isTurnable} >
             <View style={styles.cardItem}>
                 <Text style={cardData.isRevealed? styles.visible : styles.invisible} >{emojis.fruits[cardData.cardValue][1]}</Text>
             </View>

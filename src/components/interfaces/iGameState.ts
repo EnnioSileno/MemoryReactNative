@@ -1,11 +1,12 @@
-import CardData from "./iCardData";
-import PlayerData from "./iPlayerData";
+
+import { Dispatch } from "react";
+import { CardData, ICardSelectionState, PlayerData } from ".";
 
 interface GameState {
     cards: CardData[],
     playerData: PlayerData,
-    revealedCardNumber: number,
-    moveCounter: number,
+    cardSelectionState: ICardSelectionState,
+    cardsInGame: number,
 }
 
 export default GameState;

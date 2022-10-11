@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { PlayerScoreOverview, MemoryBoard, CustomButton } from '../components';
 import useGameState from '../hooks/useGamestate';
@@ -10,6 +10,10 @@ type InGameScreenProps = NativeStackScreenProps<RootStackParamList, 'InGame'>;
 
 const InGameScreen:FC<InGameScreenProps> = ({ navigation, route }): JSX.Element => {
     const { gameState, handleCardItemPressed } = useGameState(route.params.nameOfPlayer1, route.params.nameOfPlayer2);
+    
+    const effect = useEffect(() => {
+        console.log('screen re-rendered');
+    });
 
     const onCardItemPressed = (cardNumber: number): void => {
         handleCardItemPressed(cardNumber);
@@ -20,7 +24,7 @@ const InGameScreen:FC<InGameScreenProps> = ({ navigation, route }): JSX.Element 
             <PlayerScoreOverview 
                 playerData={gameState.playerData}
             />
-            <MemoryBoard gameState={gameState} onCardItemPressed={(cardNumber) => onCardItemPressed(cardNumber)} />
+            <MemoryBoard cards={gameState.cards} onCardItemPressed={(cardNumber) => onCardItemPressed(cardNumber)} />
             <CustomButton title='Go Back' onPress={() => navigation.navigate('Main')} />
         </View>
     )
