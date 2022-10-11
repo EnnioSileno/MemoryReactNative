@@ -1,5 +1,6 @@
 interface CardData {
-    cardValue: number,
+    cardNumber: number
+    cardValue: string | number,
     isTurnable: boolean,
     isRevealed: boolean, 
 }

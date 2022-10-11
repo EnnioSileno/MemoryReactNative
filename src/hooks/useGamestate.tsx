@@ -2,11 +2,9 @@ import { useState } from 'react';
 import { GameState } from '../components/interfaces';
 import { createNewCardData, createNewPlayerData, FirstCardSelected } from '../logic';
 
-const newCardData = () => createNewCardData()
-
 const createNewGameState = (player1: string, player2: string): GameState => {
     const gameState = {
-        cards: newCardData(),
+        cards: createNewCardData(),
         playerData: createNewPlayerData(player1, player2),
         cardSelectionState: new FirstCardSelected(),
         cardsInGame: 0,

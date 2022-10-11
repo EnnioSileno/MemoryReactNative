@@ -52,7 +52,7 @@ class SecondCardSelected implements ICardSelectionState {
     }
 
     #cardsHaveTheSameValue = (gameState: GameState, firstCard: number, secondCard: number): boolean => {
-        return gameState.cards[firstCard].cardValue === gameState.cards[secondCard].cardValue;
+        return gameState.cards[firstCard].cardNumberValue === gameState.cards[secondCard].cardNumberValue;
     }
 
     #addOneToThePlayerScore = (gameState: GameState): void => {

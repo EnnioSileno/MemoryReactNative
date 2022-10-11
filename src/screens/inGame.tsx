@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { PlayerScoreOverview, MemoryBoard, CustomButton } from '../components';
 import { MemoryWinnerView } from '../components/memoryGame';
@@ -9,8 +9,18 @@ import { RootStackParamList } from '../navigation/navigationArguments';
 
 type InGameScreenProps = NativeStackScreenProps<RootStackParamList, 'InGame'>;
 
+var count: number = 0;
+const createMyInt = () => {
+    count++;
+    console.log('useState of createMyInt Called ', count);
+    return 1;
+}
+
 const InGameScreen:FC<InGameScreenProps> = ({ navigation, route }): JSX.Element => {
     const { gameState, handleCardItemPressed } = useGameState(route.params.nameOfPlayer1, route.params.nameOfPlayer2);
+    const [myInt, setMyInt] = useState<number>(createMyInt());
+    console.log('my Int is:', myInt);
+    if(myInt !== 20) setMyInt(20);
     
 
     const onCardItemPressed = (cardNumber: number): void => {

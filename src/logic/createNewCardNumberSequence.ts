@@ -4,5 +4,5 @@ export const dummyCardSequence: number[] = [
     ];
 
 export const winViewTestCardSequence: number[] = [
-    7, 7
+    7, 7, 1, 1
 ]
