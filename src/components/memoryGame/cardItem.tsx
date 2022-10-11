@@ -15,7 +15,7 @@ const CardItem:FC<Props> = ({ cardData, onCardItemPressed}): JSX.Element => {
                 <Text style={cardData.isRevealed? styles.visible : styles.invisible} >{emojis.fruits[cardData.cardValue][1]}</Text>
             </View>
         </TouchableHighlight>
-    )
+    );
 }
 
 export default CardItem;
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     visible: {
         opacity: 100,
     }
-})
+});

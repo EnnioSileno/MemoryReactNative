@@ -14,7 +14,7 @@ const CustomTextInput:FC<Props> = ({placeHolder, onChangeText}): JSX.Element => 
                     placeholder={placeHolder}
                     onChangeText={onChangeText}
         />
-    )
+    );
 }
 
 export default CustomTextInput;
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 8,
     },
-})
+});

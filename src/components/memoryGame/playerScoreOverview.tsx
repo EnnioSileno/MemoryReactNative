@@ -13,7 +13,7 @@ const PlayerScoreOverview:FC<Props> = ({ playerData }): JSX.Element => {
             <PlayerScore currentScore={playerData.scorePlayer1} isPlayersTurn={playerData.isTurnPlayer1} playerName={playerData.nameOfPlayer1}/>
             <PlayerScore currentScore={playerData.scorePlayer2} isPlayersTurn={!playerData.isTurnPlayer1} playerName={playerData.nameOfPlayer2}/>
         </View>
-    )
+    );
 }
 
 export default PlayerScoreOverview;

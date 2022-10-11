@@ -15,7 +15,7 @@ const SreenNavigator:FC = (): JSX.Element => {
                 <RootStack.Screen name='InGame' component={InGameScreen} />
             </RootStack.Navigator>
         </NavigationContainer>
-    )
+    );
 }
 
 export default SreenNavigator;

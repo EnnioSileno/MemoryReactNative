@@ -10,14 +10,14 @@ type Props = {
 
 const MemoryBoard:FC<Props> = ({cards, onCardItemPressed}): JSX.Element => {
     let cardItems: JSX.Element[] = [];
-    for(let i = 0; i < 30; i++) {
+    for(let i = 0; i < cards.length; i++) {
         cardItems.push(<CardItem key={i} cardData={cards[i]} onCardItemPressed={() => onCardItemPressed(i)} ></CardItem>);
     }
     return (
         <View style={styles.boardContainer}>
             {cardItems}
         </View>
-    )
+    );
 }
 
 export default MemoryBoard;
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
     }
-})
+});

@@ -14,7 +14,7 @@ const PlayerScore:FC<Props> = ({playerName, currentScore, isPlayersTurn}): JSX.E
             <Text style={styles.playersName} >{playerName}: </Text>
             <Text>{currentScore}</Text>
         </View>
-    )
+    );
 }
 
 export default PlayerScore;
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
     playersName: {
         width: '25%'
     }
-})
+});

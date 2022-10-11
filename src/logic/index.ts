@@ -1,5 +1,5 @@
 import { createNewCardData } from "./createNewCardData";
-import { dummyCardSequence } from "./createNewCardNumberSequence";
+import { dummyCardSequence, winViewTestCardSequence } from "./createNewCardNumberSequence";
 import { createNewPlayerData } from "./createNewPlayerData";
 import FirstCardSelected from "./FirstCardSelected";
 import NoCardSelected from "./NoCardSelected";
@@ -12,5 +12,5 @@ export {
     createNewPlayerData,
     createNewCardData,
     dummyCardSequence,
-
+    winViewTestCardSequence,
 }

@@ -21,8 +21,9 @@ class SecondCardSelected implements ICardSelectionState {
             this.#flipSecondCard(Object.assign({}, gameState), setGameState, cardNumber);
             setTimeout(() => {
                 this.#calculateNewPossibleScore(Object.assign({}, gameState), setGameState, cardNumber);
-            }, 750);
+            }, 500);
         }
+
     }
 
     #hideFirstCard = (gameState: GameState, setGameState: Dispatch<SetStateAction<GameState>>): void => {
@@ -70,6 +71,7 @@ class SecondCardSelected implements ICardSelectionState {
         gameState.cards[this.#firstSelectedCard].isTurnable = false;
         gameState.cards[secondCard].isTurnable = false;
         gameState.cardsInGame -= 2;
+        gameState.isFinished = gameState.cardsInGame === 0;
     }
 }
 

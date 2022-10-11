@@ -30,7 +30,7 @@ const MainScreen:FC<MainScreenProps> = ({ navigation }): JSX.Element => {
                     })}
             />
         </View>
-    )
+    );
 }
 
 export default MainScreen;
@@ -49,4 +49,4 @@ const styles = StyleSheet.create({
     header: {
         fontSize: 24,
     }
-})
+});

@@ -10,6 +10,7 @@ const createNewGameState = (player1: string, player2: string): GameState => {
         playerData: createNewPlayerData(player1, player2),
         cardSelectionState: new FirstCardSelected(),
         cardsInGame: 0,
+        isFinished: false,
     };
     gameState.cardsInGame = gameState.cards.length;
     return gameState;
@@ -26,10 +27,11 @@ const useGameState = (player1: string, player2: string) => {
     return {
         gameState: {
             playerData: Object.assign({}, gameState.playerData),
-            cards: Object.assign({}, gameState.cards), 
+            cards:gameState.cards.slice(), 
+            isFinished: gameState.isFinished,
         },
         handleCardItemPressed,
     };
 }
 
-export default useGameState
+export default useGameState;

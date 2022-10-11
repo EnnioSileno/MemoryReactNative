@@ -11,7 +11,7 @@ const CustomButton:FC<Props> = ({title, onPress}): JSX.Element => {
         <TouchableOpacity onPress={onPress} style={styles.container}>
             <Text style={styles.text} >{title}</Text>
         </TouchableOpacity>
-    )
+    );
 }
 
 export default CustomButton;
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
     text: {
         color: '#fff'
     }
-})
+});

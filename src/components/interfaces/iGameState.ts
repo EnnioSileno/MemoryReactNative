@@ -7,6 +7,7 @@ interface GameState {
     playerData: PlayerData,
     cardSelectionState: ICardSelectionState,
     cardsInGame: number,
+    isFinished: boolean,
 }
 
 export default GameState;
